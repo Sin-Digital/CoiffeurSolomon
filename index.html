@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SOLOMON BARBERSHOP - ZURICH. Friseursalon in Zürich mit 4.7 Sternen aus 219 Rezensionen. Zypressenstrasse 54, 8004 Zürich.">
+    <title>SOLOMON BARBERSHOP - ZURICH</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Buttons klarer und hochwertiger hervorheben */
+        button,
+        .btn,
+        .button,
+        .cta,
+        .cta-button,
+        .primary-btn,
+        .hero-btn,
+        a.btn,
+        a.button,
+        a.cta-button {
+            background-color: #f4eadb !important;
+            color: #2f1f18 !important;
+            border: 1px solid #e2cfb4 !important;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18) !important;
+        }
+
+        button:hover,
+        .btn:hover,
+        .button:hover,
+        .cta:hover,
+        .cta-button:hover,
+        .primary-btn:hover,
+        .hero-btn:hover,
+        a.btn:hover,
+        a.button:hover,
+        a.cta-button:hover {
+            background-color: #fff7eb !important;
+            border-color: #eddcc5 !important;
+            color: #211510 !important;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24) !important;
+        }
+    </style>
+    <style>
+        .non-hero-button {
+            background-color: #382111 !important;
+            border-color: #382111 !important;
+            color: #ffffff !important;
+        }
+
+        .non-hero-button:hover {
+            background-color: #4a2a16 !important;
+            border-color: #4a2a16 !important;
+            color: #ffffff !important;
+        }
+
+        .forced-brown-button,
+        a.forced-brown-button,
+        button.forced-brown-button {
+            background: #382111 !important;
+            background-color: #382111 !important;
+            background-image: none !important;
+            border: 1px solid #382111 !important;
+            color: #ffffff !important;
+            box-shadow: none !important;
+        }
+
+        .forced-brown-button .btn-text,
+        .forced-brown-button .btn-icon,
+        .forced-brown-button i {
+            color: #ffffff !important;
+        }
+
+        .forced-brown-button::before,
+        .forced-brown-button::after {
+            display: none !important;
+            background: transparent !important;
+        }
+
+        .forced-brown-button:hover,
+        a.forced-brown-button:hover,
+        button.forced-brown-button:hover {
+            background: #4a2a16 !important;
+            background-color: #4a2a16 !important;
+            border-color: #4a2a16 !important;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-counter" id="preloaderCounter">0</div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill" id="preloaderBar"></div>
+            </div>
+            <div class="preloader-brand">
+                <span class="preloader-brand-text">Solomon Barbershop</span>
+                <span class="preloader-brand-sub">Zürich, Schweiz</span>
+            </div>
+        </div>
+        <div class="preloader-reveal" id="preloaderReveal"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">Solomon</span>
+                <span class="logo-accent">Barbershop</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-hover="Home">Home</a></li>
+                <li><a href="#ueber" class="nav-link" data-hover="Über uns">Über uns</a></li>
+                <li><a href="#dienstleistungen" class="nav-link" data-hover="Services">Services</a></li>
+                <li><a href="#galerie" class="nav-link" data-hover="Galerie">Galerie</a></li>
+                <li><a href="#bewertungen" class="nav-link" data-hover="Bewertungen">Bewertungen</a></li>
+                <li><a href="#kontakt" class="nav-link" data-hover="Kontakt">Kontakt</a></li>
+                <li><a href="https://www.local.ch/de/d/zuerich/8004/coiffeur/solomon-barbershop-zurich-cbtJQ3F_LywY9BIfGKx0wg#open-booking" class="nav-link nav-cta magnetic-btn" data-hover="Termin buchen" target="_blank" rel="noopener noreferrer">Termin buchen</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="" alt="Moderner Friseursalon" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line" data-reveal>
+                    <span class="title-line-inner"><span class="logo-text">Solomon</span> <span class="logo-accent">Barbershop</span> <span class="logo-text">Zurich</span></span>
+                </span>
+            </h1>
+            <p class="hero-subtitle" data-reveal>
+                4,7 Sterne aus 219 Rezensionen. Ihr Friseursalon an der Zypressenstrasse 54 in Zürich.
+            </p>
+            <div class="hero-buttons" data-reveal>
+                <a href="https://www.local.ch/de/d/zuerich/8004/coiffeur/solomon-barbershop-zurich-cbtJQ3F_LywY9BIfGKx0wg#open-booking" class="btn btn-primary magnetic-btn" target="_blank" rel="noopener noreferrer">
+                    <span class="btn-text">Termin vereinbaren</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#ueber" class="btn btn-outline magnetic-btn">
+                    <span class="btn-text">Mehr erfahren</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-corner-info">
+            <span>Zypressenstrasse 54</span>
+            <span>8004 Zürich</span>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span class="marquee-item">★ 4.7 Sterne Bewertung</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">219 Rezensionen</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">Zypressenstrasse 54, 8004 Zürich</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">044 304 88 56</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">Geöffnet Di ab 09:00</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">solomonbarbershop2020@gmail.com</span>
+                <span class="marquee-divider">—</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-item">★ 4.7 Sterne Bewertung</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">219 Rezensionen</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">Zypressenstrasse 54, 8004 Zürich</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">044 304 88 56</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">Geöffnet Di ab 09:00</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-item">solomonbarbershop2020@gmail.com</span>
+                <span class="marquee-divider">—</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="ueber">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main img-reveal" data-reveal>
+                        <div class="img-reveal-overlay"></div>
+                        <img src="Ueberuns-gross.png" alt="Solomon Barbershop Team" loading="lazy">
+                    </div>
+                    <div class="about-img-accent img-reveal" data-reveal>
+                        <div class="img-reveal-overlay"></div>
+                        <img src="Ueberuns-klein.png" alt="Friseursalon Ambiente" loading="lazy">
+                    </div>
+                    <div class="about-experience-badge" data-reveal>
+                        <span class="exp-number">10+</span>
+                        <span class="exp-text">Jahre<br>Erfahrung</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag" data-reveal>Über uns</span>
+                    <h2 class="section-title split-text" data-reveal>Wo Handwerk auf <span class="text-accent">Leidenschaft</span> trifft</h2>
+                    <div class="about-text-block" data-reveal>
+                        <p class="about-text">
+                            Willkommen bei <strong>SOLOMON BARBERSHOP - ZURICH</strong> an der Zypressenstrasse 54.
+                            Unser Team steht für präzise Schnitte, saubere Übergänge und moderne Barber-Styles.
+                        </p>
+                        <p class="about-text">
+                            Ob klassischer Look oder moderner Schnitt: Wir nehmen uns Zeit für Ihre Wünsche
+                            und sorgen für ein Ergebnis, mit dem Sie zufrieden den Salon verlassen.
+                        </p>
+                    </div>
+                    <div class="about-features" data-reveal>
+                        <div class="about-feature">
+                            <div class="feature-line"></div>
+                            <span>Professionelle Beratung</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-line"></div>
+                            <span>Familien & Kinder willkommen</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-line"></div>
+                            <span>Premium Pflegeprodukte</span>
+                        </div>      
+                        <div class="about-feature">
+                            <div class="feature-line"></div>
+                            <span>Moderne Techniken & Trends</span>
+                        </div>
+                    </div>
+<a href="#kontakt" class="btn btn-primary magnetic-btn forced-brown-button" data-reveal>
+                        <span class="btn-text">Jetzt Termin buchen</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust" id="vertrauen">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-card tilt-card" data-reveal>
+                    <div class="trust-card-shine"></div>
+                    <div class="trust-icon"><i class="fas fa-star"></i></div>
+                    <div class="trust-number" data-count="4.7">0</div>
+                    <div class="trust-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="trust-label">Google Bewertung</p>
+                </div>
+                <div class="trust-card tilt-card" data-reveal>
+                    <div class="trust-card-shine"></div>
+                    <div class="trust-icon"><i class="fas fa-users"></i></div>
+                    <div class="trust-number" data-count="219" data-suffix="">0</div>
+                    <p class="trust-label">Zufriedene Kunden</p>
+                </div>
+                <div class="trust-card tilt-card" data-reveal>
+                    <div class="trust-card-shine"></div>
+                    <div class="trust-icon"><i class="fas fa-award"></i></div>
+                    <div class="trust-number" data-count="10" data-suffix="+">0</div>
+                    <p class="trust-label">Jahre Erfahrung</p>
+                </div>
+                <div class="trust-card tilt-card" data-reveal>
+                    <div class="trust-card-shine"></div>
+                    <div class="trust-icon"><i class="fas fa-heart"></i></div>
+                    <div class="trust-number" data-count="100" data-suffix="%">0</div>
+                    <p class="trust-label">Leidenschaft</p>
+                </div>
+            </div>
+            <div class="trust-quotes">
+                <div class="trust-quote" data-reveal>
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Bester Barber-Shop in ZH. Kann ich nur weiter empfehlen! Solomun ist der beste."</p>
+                    <span class="quote-author">— Martina Guerra</span>
+                </div>
+                <div class="trust-quote" data-reveal>
+                    <i class="fas fa-quote-left"></i>
+                    <p>"If you are in Zurich and are wanting a good head shave and beard trim then make an appointment here."</p>
+                    <span class="quote-author">— Littlebear Tn</span>
+                </div>
+                <div class="trust-quote" data-reveal>
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Wenn ich einen Coiffeur empfehlen würde, dann diesen. Sehr professionell und starke Detailarbeit."</p>
+                    <span class="quote-author">— Leandro Barrera</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="dienstleistungen">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-reveal>Dienstleistungen</span>
+                <h2 class="section-title" data-reveal>Dienstleistungen & <span class="text-accent">Preise</span></h2>
+                <p class="section-desc" data-reveal>Beliebte Services und Preisübersicht von SOLOMON BARBERSHOP - ZURICH.</p>
+            </div>
+            <div class="services-grid figma-pricing-grid">
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">01</div>
+                        <div class="service-content">
+                            <h3>Cut &amp; Go</h3>
+                            <p>Klassischer schneller Schnitt.</p>
+                            <div class="service-price">Fr. 30.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">02</div>
+                        <div class="service-content">
+                            <h3>Haarschnitt &amp; Styling (mit Waschen)</h3>
+                            <p>Komplettservice inkl. Waschen.</p>
+                            <div class="service-price">Fr. 40.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">03</div>
+                        <div class="service-content">
+                            <h3>Bart rasieren (stutzen, modelieren)</h3>
+                            <p>Präzise Bartform und Konturen.</p>
+                            <div class="service-price">Fr. 25.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">04</div>
+                        <div class="service-content">
+                            <h3>Bart trimmen (Maschine)</h3>
+                            <p>Schnell und sauber mit Maschine.</p>
+                            <div class="service-price">Fr. 15.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">05</div>
+                        <div class="service-content">
+                            <h3>Waschen &amp; Styling</h3>
+                            <p>Fresh Look ohne Schnitt.</p>
+                            <div class="service-price">Fr. 15.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">06</div>
+                        <div class="service-content">
+                            <h3>Junior Haarschnitt &amp; Styling (bis 12 Jahre)</h3>
+                            <p>Kinderschnitt inkl. Styling.</p>
+                            <div class="service-price">Fr. 25.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">07</div>
+                        <div class="service-content">
+                            <h3>Augenbrauen Zupfen (mit Faden)</h3>
+                            <p>Feine Formkorrektur mit Faden.</p>
+                            <div class="service-price">Fr. 15.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">08</div>
+                        <div class="service-content">
+                            <h3>Enthaaren mit Wachs (Ohren &amp; Backen)</h3>
+                            <p>Saubere Konturen mit Wachs.</p>
+                            <div class="service-price">Fr. 10.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">09</div>
+                        <div class="service-content">
+                            <h3>Gesicht wachsen</h3>
+                            <p>Wachsbehandlung fürs Gesicht.</p>
+                            <div class="service-price">Fr. 20.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">10</div>
+                        <div class="service-content">
+                            <h3>Gesichtsmaske (Black Mask)</h3>
+                            <p>Tiefenreinigung und Pflege.</p>
+                            <div class="service-price">Fr. 20.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">11</div>
+                        <div class="service-content">
+                            <h3>Haare färben</h3>
+                            <p>Farbe nach Wunsch.</p>
+                            <div class="service-price">Fr. 40.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">12</div>
+                        <div class="service-content">
+                            <h3>Bart färben</h3>
+                            <p>Farbton passend zum Look.</p>
+                            <div class="service-price">Fr. 20.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">13</div>
+                        <div class="service-content">
+                            <h3>Haare strecken (Chemie Strecke)</h3>
+                            <p>Glattes Finish mit Chemie-Strecke.</p>
+                            <div class="service-price">Fr. 30.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">14</div>
+                        <div class="service-content">
+                            <h3>Bart strecken</h3>
+                            <p>Geglätteter Bart-Look.</p>
+                            <div class="service-price">Fr. 20.-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card tilt-card pricing-row" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-number">15</div>
+                        <div class="service-content">
+                            <h3>Facial Scrup (Safouri)</h3>
+                            <p>Reinigung und Pflege fürs Gesicht.</p>
+                            <div class="service-price">Fr. 20.-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Text Divider -->
+    <div class="big-text-divider">
+        <div class="big-text-track" data-speed="-0.5">
+            <span>Stil</span>
+            <span>Qualität</span>
+            <span>Perfektion</span>
+            <span>Handwerk</span>
+            <span>Stil</span>
+            <span>Qualität</span>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="galerie">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-reveal>Galerie</span>
+                <h2 class="section-title" data-reveal>Unsere <span class="text-accent">Arbeiten</span></h2>
+                <p class="section-desc" data-reveal>Einblicke in unseren Salon und unsere besten Ergebnisse.</p>
+            </div>
+        </div>
+        <div class="gallery-horizontal" id="galleryTrack">
+            <div class="gallery-item" data-reveal>
+                <div class="gallery-item-inner">
+                    <img src="UnsereArbeit1.png" alt="Haarschnitt1" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-title">Frisur</span>
+                        <span class="gallery-item-cat">Styling</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-reveal>
+                <div class="gallery-item-inner">
+                    <img src="UnsereArbeit2.png" alt="Haarschnitt2" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-title">Salon</span>
+                        <span class="gallery-item-cat">Interieur</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-reveal>
+                <div class="gallery-item-inner">
+                    <img src="UnsereArbeit3.png" alt="Haarschnitt3" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-title">Haarschnitt</span>
+                        <span class="gallery-item-cat">Modern</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-reveal>
+                <div class="gallery-item-inner">
+                    <img src="UnsereArbeit4.png" alt="Haarschnitt4" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-title">Ambiente</span>
+                        <span class="gallery-item-cat">Barbershop</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-reveal>
+                <div class="gallery-item-inner">
+                    <img src="UnsereArbeit5.png" alt="Haarschnitt5" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-title">Ergebnis</span>
+                        <span class="gallery-item-cat">Styling</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-reveal>
+                <div class="gallery-item-inner">
+                    <img src="UnsereArbeit6.png" alt="Haarschnitt6" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-title">Atmosphäre</span>
+                        <span class="gallery-item-cat">Salon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-drag-hint">
+            <i class="fas fa-arrows-alt-h"></i>
+            <span>Ziehen zum Erkunden</span>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Schliessen"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" aria-label="Vorheriges Bild"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Nächstes Bild"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="bewertungen">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-reveal>Kundenstimmen</span>
+                <h2 class="section-title" data-reveal>Rezensionen unserer <span class="text-accent">Kunden</span></h2>
+                <div class="reviews-summary" data-reveal>
+                    <div class="reviews-score-wrap">
+                        <div class="reviews-score">4.7</div>
+                        <div class="reviews-score-bar">
+                            <div class="reviews-score-fill" style="width: 94%"></div>
+                        </div>
+                    </div>
+                    <div class="reviews-meta">
+                        <div class="reviews-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>Basierend auf 219 Berichten</span>
+                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="Google" class="google-logo">
+                </div>
+                <div class="popular-searches" data-reveal>
+                    <span class="popular-title">Wird auch oft gesucht:</span>
+                    <span class="popular-chip">team</span>
+                    <span class="popular-chip">preis</span>
+                    <span class="popular-chip">zufrieden</span>
+                    <span class="popular-chip">wünsche</span>
+                    <span class="popular-chip">afrolook</span>
+                    <span class="popular-chip">schneiden</span>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card tilt-card" data-reveal>
+                    <div class="review-card-glow"></div>
+                    <div class="review-header">
+                        <div class="review-avatar"><span>MS</span></div>
+                        <div>
+                            <div class="review-name">Martina Guerra</div>
+                            <div class="review-date">vor 6 Monaten</div>
+                        </div>
+                        <div class="review-verified"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Bester Barber-Shop in ZH. Kann ich nur weiter empfehlen! Solomun ist der beste. Herzlichen Dank & bis bald!"</p>
+                    <div class="review-source"><i class="fab fa-google"></i> Google Bewertung</div>
+                </div>
+                <div class="review-card tilt-card" data-reveal>
+                    <div class="review-card-glow"></div>
+                    <div class="review-header">
+                        <div class="review-avatar"><span>LT</span></div>
+                        <div>
+                            <div class="review-name">Littlebear Tn</div>
+                            <div class="review-date">vor 2 Jahren</div>
+                        </div>
+                        <div class="review-verified"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"If you are in Zurich and are wanting a good head shave and beard trim then make an appointment here. The barber is fantastic and gave me one of the best head shaves I have had in a very very long time."</p>
+                    <div class="review-source"><i class="fab fa-google"></i> Google Bewertung</div>
+                </div>
+                <div class="review-card tilt-card" data-reveal>
+                    <div class="review-card-glow"></div>
+                    <div class="review-header">
+                        <div class="review-avatar"><span>LB</span></div>
+                        <div>
+                            <div class="review-name">Leandro Barrera</div>
+                            <div class="review-date">vor 5 Jahren</div>
+                        </div>
+                        <div class="review-verified"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Wenn ich einem einen Coiffeur laden empfehlen würde, dann wäre es diesen! Ich war bei vielen Barbershops und keiner war so professionell wie dieser! Das Team ist offen, man fühlt sich schnell wohl, und die Haircuts bereut man absolut gar nicht."</p>
+                    <div class="review-source"><i class="fab fa-google"></i> Google Bewertung</div>
+                </div>
+                <div class="review-card tilt-card" data-reveal>
+                    <div class="review-card-glow"></div>
+                    <div class="review-header">
+                        <div class="review-avatar"><span>AH</span></div>
+                        <div>
+                            <div class="review-name">Google Nutzer</div>
+                            <div class="review-date">Aktuelle Infos</div>
+                        </div>
+                        <div class="review-verified"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"Telefonisch bestätigt vor 3 Wochen. Viele Kunden schätzen Team, Preis und Umsetzung ihrer Wünsche."</p>
+                    <div class="review-source"><i class="fab fa-google"></i> 219 Berichte</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-reveal>Kontakt</span>
+                <h2 class="section-title" data-reveal>Besuchen Sie <span class="text-accent">uns</span></h2>
+                <p class="section-desc" data-reveal>SOLOMON BARBERSHOP - ZURICH an der Zypressenstrasse 54.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card" data-reveal>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Zypressenstrasse 54<br>8004 Zürich</p>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-reveal>
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+41443048856">044 304 88 56</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-reveal>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:solomonbarbershop2020@gmail.com">solomonbarbershop2020@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-card" data-reveal>
+                    <h3>Termin buchen</h3>
+                    <p>Für Buchungen nutzen Sie bitte den Menüpunkt <strong>Termin buchen</strong> in der Navigation oder rufen Sie uns direkt an.</p>
+                    <a href="https://www.local.ch/de/d/zuerich/8004/coiffeur/solomon-barbershop-zurich-cbtJQ3F_LywY9BIfGKx0wg#open-booking" class="btn btn-primary booking-link-btn forced-brown-button" target="_blank" rel="noopener noreferrer">
+                        <span class="btn-text">Termin buchen</span>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-map contact-map-full" data-reveal>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2704.5!2d8.5241!3d47.3095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDE4JzM0LjIiTiA4wrAzMScyNi44IkU!5e0!3m2!1sde!2sch!4v1700000000000"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Solomon Barbershop Standort"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo footer-logo">
+                        <span class="logo-text">Solomon</span>
+                        <span class="logo-accent">Barbershop</span>
+                    </a>
+                    <p>Friseursalon in Zürich mit 4.7 Sternen aus 219 Berichten.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" class="magnetic-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" class="magnetic-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="WhatsApp" class="magnetic-btn"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#ueber">Über uns</a></li>
+                        <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#bewertungen">Bewertungen</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#dienstleistungen">Cut &amp; Go - Fr. 30.-</a></li>
+                        <li><a href="#dienstleistungen">Haarschnitt &amp; Styling - Fr. 40.-</a></li>
+                        <li><a href="#dienstleistungen">Bart rasieren - Fr. 25.-</a></li>
+                        <li><a href="#dienstleistungen">Bart trimmen - Fr. 15.-</a></li>
+                        <li><a href="#dienstleistungen">Waschen &amp; Styling - Fr. 15.-</a></li>
+                        <li><a href="#dienstleistungen">Junior Haarschnitt &amp; Styling - Fr. 25.-</a></li>
+                        <li><a href="#dienstleistungen">Augenbrauen Zupfen - Fr. 15.-</a></li>
+                        <li><a href="#dienstleistungen">Enthaaren mit Wachs - Fr. 10.-</a></li>
+                        <li><a href="#dienstleistungen">Gesicht wachsen - Fr. 20.-</a></li>
+                        <li><a href="#dienstleistungen">Gesichtsmaske (Black Mask) - Fr. 20.-</a></li>
+                        <li><a href="#dienstleistungen">Haare färben - Fr. 40.-</a></li>
+                        <li><a href="#dienstleistungen">Bart färben - Fr. 20.-</a></li>
+                        <li><a href="#dienstleistungen">Haare strecken - Fr. 30.-</a></li>
+                        <li><a href="#dienstleistungen">Bart strecken - Fr. 20.-</a></li>
+                        <li><a href="#dienstleistungen">Facial Scrup (Safouri) - Fr. 20.-</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Zypressenstrasse 54, 8004 Zürich</li>
+                        <li><a href="tel:+41443048856"><i class="fas fa-phone"></i> 044 304 88 56</a></li>
+                        <li><a href="mailto:solomonbarbershop2020@gmail.com"><i class="fas fa-envelope"></i> solomonbarbershop2020@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Mo-Fr: 9:00-20:00</li>
+                        <li><i class="fas fa-clock"></i> Sa: 9:00-18:00</li>
+                        <li><i class="fas fa-clock"></i> So: Geschlossen</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SOLOMON BARBERSHOP - ZURICH. Alle Rechte vorbehalten.</p>
+                <p>Erstellt von <a href="https://www.sin-digital.com" target="_blank" rel="noopener noreferrer">Sin Digital</a></p>
+                <a href="#home" class="back-to-top magnetic-btn" aria-label="Nach oben">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        (function () {
+            var buttons = document.querySelectorAll("button, input[type='submit'], input[type='button']");
+
+            buttons.forEach(function (el) {
+                var inHero = el.closest("[class*='hero'], [id*='hero'], .hero, #hero");
+                if (!inHero) {
+                    el.classList.add("non-hero-button");
+                }
+            });
+
+            var targets = document.querySelectorAll("a, button, input[type='submit'], input[type='button']");
+            targets.forEach(function (el) {
+                var label = "";
+                if (el.tagName.toLowerCase() === "input") {
+                    label = (el.value || "").trim().toLowerCase();
+                } else {
+                    label = (el.textContent || "").trim().toLowerCase().replace(/\s+/g, " ");
+                }
+
+                if (label === "jetzt termin buchen" || label === "termin buchen") {
+                    el.classList.add("forced-brown-button");
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
