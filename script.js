@@ -307,18 +307,7 @@
         });
     });
 
-    /* ========== PARALLAX ========== */
-    const heroBg = document.querySelector('.hero-bg-img');
-
-    function handleParallax() {
-        if (window.innerWidth < 768) return;
-        const scrolled = window.scrollY;
-        if (heroBg && scrolled < window.innerHeight * 1.2) {
-            heroBg.style.transform = `scale(1.15) translate3d(0, ${scrolled * 0.25}px, 0)`;
-        }
-    }
-
-    window.addEventListener('scroll', handleParallax, { passive: true });
+    /* ========== PARALLAX (disabled for consistent hero framing) ========== */
 
     /* ========== ACTIVE NAV LINK ========== */
     const sections = document.querySelectorAll('section[id]');
