@@ -89,6 +89,20 @@
             border-color: #4a2a16 !important;
             color: #ffffff !important;
         }
+
+        .nav-toggle,
+        .nav-toggle.non-hero-button,
+        .nav-toggle.forced-brown-button,
+        .nav-toggle:hover,
+        .nav-toggle:focus,
+        .nav-toggle:focus-visible,
+        .nav-toggle:active {
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
     </style>
 </head>
 <body>
@@ -141,7 +155,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
-            <img src="" alt="Moderner Friseursalon" class="hero-bg-img">
+            <img src="Hero-1.png" alt="Moderner Friseursalon" class="hero-bg-img">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -792,6 +806,7 @@
             var buttons = document.querySelectorAll("button, input[type='submit'], input[type='button']");
 
             buttons.forEach(function (el) {
+                if (el.classList.contains("nav-toggle")) return;
                 var inHero = el.closest("[class*='hero'], [id*='hero'], .hero, #hero");
                 if (!inHero) {
                     el.classList.add("non-hero-button");
@@ -800,6 +815,7 @@
 
             var targets = document.querySelectorAll("a, button, input[type='submit'], input[type='button']");
             targets.forEach(function (el) {
+                if (el.classList.contains("nav-toggle")) return;
                 var label = "";
                 if (el.tagName.toLowerCase() === "input") {
                     label = (el.value || "").trim().toLowerCase();
