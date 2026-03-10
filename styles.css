@@ -637,6 +637,69 @@ ul { list-style: none; }
     transform: translateY(0);
 }
 
+/* =========================================
+   HERO BUTTONS — Brown & White Ghost Style
+   ========================================= */
+
+/* Button 1: Braun gefüllt → Hover: transparent mit braunem Rand */
+.hero-buttons .btn-primary,
+.hero .hero-buttons .btn-primary {
+    background: #382111 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #382111 !important;
+    box-shadow: none !important;
+    transition: background 0.45s var(--ease), color 0.45s var(--ease), border-color 0.45s var(--ease) !important;
+}
+
+.hero-buttons .btn-primary::before,
+.hero .hero-buttons .btn-primary::before {
+    display: none !important;
+}
+
+.hero-buttons .btn-primary:hover,
+.hero .hero-buttons .btn-primary:hover {
+    background: transparent !important;
+    color: #ffffff !important;
+    border-color: #382111 !important;
+    box-shadow: none !important;
+}
+
+.hero-buttons .btn-primary .btn-text,
+.hero-buttons .btn-primary .btn-icon,
+.hero-buttons .btn-primary i {
+    color: inherit !important;
+}
+
+/* Button 2: Transparent mit braunem Rand, Text weiß → Hover: braun gefüllt */
+.hero-buttons .btn-outline,
+.hero .hero-buttons .btn-outline {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid #382111 !important;
+    box-shadow: none !important;
+    transition: background 0.45s var(--ease), color 0.45s var(--ease), border-color 0.45s var(--ease) !important;
+}
+
+.hero-buttons .btn-outline::before,
+.hero .hero-buttons .btn-outline::before {
+    display: none !important;
+}
+
+.hero-buttons .btn-outline:hover,
+.hero .hero-buttons .btn-outline:hover {
+    background: #382111 !important;
+    color: #ffffff !important;
+    border-color: #382111 !important;
+    box-shadow: none !important;
+}
+
+.hero-buttons .btn-outline .btn-text {
+    color: inherit !important;
+}
+
+/* ========================================= */
+
 .hero-scroll-indicator {
     position: absolute;
     bottom: 48px;
