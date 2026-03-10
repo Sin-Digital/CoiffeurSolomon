@@ -340,13 +340,22 @@ ul { list-style: none; }
     cursor: pointer;
     padding: 8px;
     z-index: 9991;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle:focus,
+.nav-toggle:focus-visible,
+.nav-toggle:active {
+    outline: none;
+    background: transparent;
+    box-shadow: none;
 }
 
 .nav-toggle span {
     display: block;
     width: 32px;
     height: 1px;
-    background: var(--white);
+    background: currentColor;
     transition: all 0.4s var(--ease);
     transform-origin: center;
 }
@@ -491,42 +500,31 @@ ul { list-style: none; }
 /* --- Hero --- */
 .hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100svh;
+    min-height: calc(100vh - var(--nav-h));
+    min-height: calc(100svh - var(--nav-h));
+    margin-top: var(--nav-h);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: url('Hero-1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-size: contain;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
-    
+    background: #0b0b0b;
 }
 
 .hero-bg {
     position: absolute;
     inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .hero-bg-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.15);
-    will-change: transform;
-}
-
-.hero.loaded .hero-bg-img {
-    animation: heroZoom 12s var(--ease) forwards;
-}
-
-@keyframes heroZoom {
-    to { transform: scale(1); }
+    height: auto;
+    max-width: none;
+    object-position: center center;
+    transform: none;
+    will-change: auto;
 }
 
 .hero-overlay {
@@ -1079,7 +1077,7 @@ ul { list-style: none; }
 }
 
 .figma-pricing-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     max-width: 920px;
     margin: 0 auto;
@@ -1885,7 +1883,7 @@ ul { list-style: none; }
 @media (max-width: 1024px) {
     :root { --section-py: clamp(80px, 10vw, 120px); }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .figma-pricing-grid { grid-template-columns: 1fr; }
+    .figma-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .about-grid { grid-template-columns: 1fr; gap: 64px; }
     .about-img-accent { right: 0; bottom: -32px; }
     .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
@@ -1968,8 +1966,10 @@ ul { list-style: none; }
     .hero-subtitle { font-size: 14px; line-height: 1.7; }
     .hero-scroll-indicator { display: none; }
     .hero-corner-info { display: none; }
+    .hero-bg-img { width: 100%; height: auto; }
 
     .services-grid { grid-template-columns: 1fr; }
+    .figma-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .service-content h3 { font-size: 22px; }
     .service-content p { font-size: 13px; }
     .pricing-row .service-card-inner {
